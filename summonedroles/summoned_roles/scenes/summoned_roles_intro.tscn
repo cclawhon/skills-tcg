@@ -1,0 +1,758 @@
+[gd_scene load_steps=32 format=3 uid="uid://c3x5d4eor23lm"]
+
+[ext_resource type="Script" uid="uid://xm1hg8tfsp7i" path="res://summoned_roles/scripts/summoned_roles_intro.gd" id="1_dq86j"]
+[ext_resource type="PackedScene" uid="uid://ddk1xj36kbjux" path="res://summoned_roles/scenes/SceneX.tscn" id="2_2iipp"]
+[ext_resource type="Texture2D" uid="uid://btj7sykmql48o" path="res://summoned_roles/assets/scene/SummonedRolesBGempty.png" id="2_rrqa3"]
+[ext_resource type="Texture2D" uid="uid://ci1ynfuw2750o" path="res://summoned_roles/assets/scene/Image-CardsCircle.png" id="3_2iipp"]
+[ext_resource type="Texture2D" uid="uid://baneo4smjxoc6" path="res://summoned_roles/assets/scene/Image_CardsCircleFlat.png" id="4_ceadk"]
+[ext_resource type="Texture2D" uid="uid://bs1tpy5v8v8r7" path="res://summoned_roles/assets/scene/SummonedRolesTitle.png" id="5_yjgv3"]
+[ext_resource type="Texture2D" uid="uid://cchfvmdqcvhj4" path="res://summoned_roles/assets/scene/peeps.png" id="6_gyc0u"]
+[ext_resource type="Texture2D" uid="uid://dtqq1oi13koo8" path="res://summoned_roles/assets/scene/Char1_OrdAuraX.png" id="7_cutjy"]
+[ext_resource type="Texture2D" uid="uid://b0xllw58qfu7t" path="res://summoned_roles/assets/scene/Char2_Liaseillume.png" id="8_spx55"]
+[ext_resource type="Texture2D" uid="uid://b61otianuer0g" path="res://summoned_roles/assets/scene/Char5_FyreForge.png" id="9_rp6ex"]
+[ext_resource type="Texture2D" uid="uid://bac6fj2pkd5s0" path="res://summoned_roles/assets/scene/Char4_SearchLight.png" id="10_otcs0"]
+[ext_resource type="Texture2D" uid="uid://c01g0du7ygxao" path="res://summoned_roles/assets/scene/Char3_Fathomdepth.png" id="11_eljqt"]
+[ext_resource type="Texture2D" uid="uid://co8dl4nlxjsp4" path="res://summoned_roles/assets/UI/character_buttons/Char1-Hover.png" id="12_6oxst"]
+[ext_resource type="Texture2D" uid="uid://cfln8dvwp6h6r" path="res://summoned_roles/assets/UI/character_buttons/Char3-Hover.png" id="13_l8xgd"]
+[ext_resource type="Texture2D" uid="uid://r1qwsqphdy0g" path="res://summoned_roles/assets/UI/character_buttons/Char2-Hover.png" id="14_y6iw8"]
+[ext_resource type="Texture2D" uid="uid://bahn5x5malsk8" path="res://summoned_roles/assets/UI/character_buttons/Char4-Hover.png" id="15_ew8mt"]
+[ext_resource type="Texture2D" uid="uid://qb257gm8bdiw" path="res://summoned_roles/assets/UI/character_buttons/Char5-Hover.png" id="16_pu0wg"]
+[ext_resource type="Theme" uid="uid://de5noq4budj6f" path="res://summoned_roles/themes_fx/info_ui_theme.tres" id="17_rprjg"]
+[ext_resource type="FontFile" uid="uid://do0av1yoxn0dg" path="res://summoned_roles/themes_fx/Avqest.ttf" id="18_tjkk4"]
+[ext_resource type="Texture2D" uid="uid://cveymcyn4lhyo" path="res://summoned_roles/assets/UI/sample_card/button_cardinfo.png" id="19_tivxf"]
+[ext_resource type="Texture2D" uid="uid://rwjd2mnbb62d" path="res://summoned_roles/assets/UI/sample_card/SampleCard-CardOnly.png" id="20_75o3t"]
+[ext_resource type="Texture2D" uid="uid://8aw3b1f1nkip" path="res://summoned_roles/assets/UI/sample_card/SampleCard-Descriptors-All.png" id="21_rpf36"]
+[ext_resource type="Texture2D" uid="uid://c7jjww7p2kl0u" path="res://summoned_roles/assets/UI/sample_card/button-exit.png" id="22_m8ffh"]
+[ext_resource type="AudioStream" uid="uid://dm60q30w5q4u8" path="res://summoned_roles/themes_fx/audio/SummonedRoles-Home_mixdown.mp3" id="24_2iipp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrqa3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2iipp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ceadk"]
+bg_color = Color(0.756863, 1, 1, 0.0196078)
+shadow_color = Color(1, 1, 1, 0.501961)
+shadow_size = 12
+
+[sub_resource type="Theme" id="Theme_a7old"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_rrqa3")
+Button/styles/focus = SubResource("StyleBoxEmpty_2iipp")
+Button/styles/hover = SubResource("StyleBoxFlat_ceadk")
+
+[sub_resource type="Animation" id="Animation_spocf"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/Title:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/Title:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG/Title:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BG/Title:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Peeps:self_modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.670588, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Summoners/OrdAuraX:self_modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Summoners/LiaseIllume:self_modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Summoners/FathomDepth:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Summoners/SearchLight:self_modulate:a")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Summoners/FyreForge:self_modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BG/Title:scale:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BG/Title:scale:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BG/ImageCards:self_modulate:a")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BG/ImageCards2:self_modulate:a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_x0t55"]
+resource_name = "anim_intro"
+length = 10.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/Title:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.0333333, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BG/Title:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.5, 1.06667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BG/Title:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BG/Title:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.06667, 8.5, 10)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Peeps:self_modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.670588, -0.25, 0, 0.25, 0, 0.671, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.0666667, 2, 3, 7.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Summoners/OrdAuraX:self_modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(3, 4.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Summoners/LiaseIllume:self_modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.03333, 5.53333)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Summoners/FathomDepth:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(5, 6.5)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Summoners/SearchLight:self_modulate:a")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(6, 7.5)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Summoners/FyreForge:self_modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(7, 8.5)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BG/Title:scale:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.07)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BG/Title:scale:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.07)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BG/ImageCards:self_modulate:a")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2, 2.99575, 8.5, 10)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BG/ImageCards2:self_modulate:a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(8.50076, 10)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4nfhl"]
+_data = {
+&"RESET": SubResource("Animation_spocf"),
+&"anim_intro": SubResource("Animation_x0t55")
+}
+
+[node name="SummonedRolesIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dq86j")
+scene_x = ExtResource("2_2iipp")
+
+[node name="BG" type="Control" parent="."]
+custom_minimum_size = Vector2(1366, 768)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1366.0
+offset_bottom = 768.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ImageBG" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_right = 1369.0
+offset_bottom = 783.0
+texture = ExtResource("2_rrqa3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ImageCards" type="TextureRect" parent="BG"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 533.0
+offset_top = 341.0
+offset_right = 854.0
+offset_bottom = 526.0
+mouse_filter = 2
+texture = ExtResource("3_2iipp")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ImageCards2" type="TextureRect" parent="BG"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 533.0
+offset_top = 310.0
+offset_right = 854.0
+offset_bottom = 451.0
+texture = ExtResource("4_ceadk")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button05" type="Button" parent="BG/ImageCards2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.624
+offset_bottom = 0.0159988
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("17_rprjg")
+disabled = true
+
+[node name="Title" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 234.0
+offset_top = 98.0
+offset_right = -187.0
+offset_bottom = 285.0
+grow_horizontal = 2
+pivot_offset = Vector2(472, 93)
+texture = ExtResource("5_yjgv3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Peeps" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.670588)
+layout_mode = 0
+offset_left = 386.0
+offset_top = 443.0
+offset_right = 1012.0
+offset_bottom = 755.0
+texture = ExtResource("6_gyc0u")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Summoners" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 346.0
+offset_top = 430.0
+offset_right = 1086.0
+offset_bottom = 768.0
+size_flags_vertical = 3
+
+[node name="OrdAuraX" type="TextureRect" parent="Summoners"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 15.0
+offset_top = 31.0
+offset_right = 120.0
+offset_bottom = 286.0
+mouse_filter = 2
+texture = ExtResource("7_cutjy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LiaseIllume" type="TextureRect" parent="Summoners"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 89.0
+offset_top = 35.0
+offset_right = 286.0
+offset_bottom = 326.0
+mouse_filter = 2
+texture = ExtResource("8_spx55")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="FyreForge" type="TextureRect" parent="Summoners"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 565.0
+offset_top = 22.0
+offset_right = 708.0
+offset_bottom = 286.0
+mouse_filter = 2
+texture = ExtResource("9_rp6ex")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="SearchLight" type="TextureRect" parent="Summoners"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 460.0
+offset_top = 32.0
+offset_right = 600.0
+offset_bottom = 314.0
+mouse_filter = 2
+texture = ExtResource("10_otcs0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="FathomDepth" type="TextureRect" parent="Summoners"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 213.0
+offset_top = 28.0
+offset_right = 440.0
+offset_bottom = 336.0
+mouse_filter = 2
+texture = ExtResource("11_eljqt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Buttons" type="Control" parent="."]
+custom_minimum_size = Vector2(1366, 768)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1371.0
+offset_bottom = 767.0
+mouse_filter = 1
+
+[node name="HoverOA" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 293.0
+offset_top = 389.0
+offset_right = 535.0
+offset_bottom = 770.0
+texture = ExtResource("12_6oxst")
+
+[node name="HoverFD" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 487.0
+offset_top = 382.0
+offset_right = 857.0
+offset_bottom = 767.0
+texture = ExtResource("13_l8xgd")
+
+[node name="HoverLI" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 362.0
+offset_top = 393.0
+offset_right = 700.0
+offset_bottom = 774.0
+texture = ExtResource("14_y6iw8")
+
+[node name="HoverSL" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 733.0
+offset_top = 390.0
+offset_right = 1011.0
+offset_bottom = 771.0
+texture = ExtResource("15_ew8mt")
+
+[node name="HoverFF" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 842.0
+offset_top = 381.0
+offset_right = 1123.0
+offset_bottom = 768.0
+texture = ExtResource("16_pu0wg")
+
+[node name="ButtonOA" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 459.0
+offset_right = 454.0
+offset_bottom = 720.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("17_rprjg")
+disabled = true
+
+[node name="ButtonLI" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 467.0
+offset_right = 566.0
+offset_bottom = 737.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("17_rprjg")
+disabled = true
+
+[node name="ButtonFD" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 460.0
+offset_right = 745.0
+offset_bottom = 761.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("17_rprjg")
+disabled = true
+
+[node name="ButtonSL" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 464.0
+offset_right = 898.0
+offset_bottom = 738.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("17_rprjg")
+disabled = true
+
+[node name="ButtonFF" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 455.0
+offset_right = 1015.0
+offset_bottom = 711.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("17_rprjg")
+disabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 559.0
+offset_right = 262.0
+offset_bottom = 759.0
+
+[node name="HoverHelpText" type="RichTextLabel" parent="Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/line_separation = -4
+theme_override_fonts/normal_font = ExtResource("18_tjkk4")
+theme_override_font_sizes/normal_font_size = 21
+text = "Summon a role  > > > 
+to see her talent cards, or seek wisdom in the Card Guide (?)."
+fit_content = true
+vertical_alignment = 1
+
+[node name="CardInfo" type="TextureButton" parent="Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_a7old")
+texture_normal = ExtResource("19_tivxf")
+texture_hover = ExtResource("19_tivxf")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="CardInfoOverlay" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 1366.0
+offset_bottom = 768.0
+pivot_offset = Vector2(683, 384)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="PanelBG" type="Panel" parent="CardInfoOverlay"]
+custom_minimum_size = Vector2(1366, 768)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("17_rprjg")
+metadata/_edit_use_anchors_ = true
+
+[node name="CardSample" type="TextureRect" parent="CardInfoOverlay"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 348.0
+offset_top = 183.0
+offset_right = 658.0
+offset_bottom = 634.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("20_75o3t")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="DescriptionsAll" type="TextureRect" parent="CardInfoOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("21_rpf36")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonExit" type="TextureButton" parent="CardInfoOverlay"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("22_m8ffh")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4nfhl")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_2iipp")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="BG/ImageCards2/Button05" to="." method="_on_button_05_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonOA" to="." method="_on_button_oa_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonOA" to="." method="_on_button_oa_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonOA" to="." method="_on_button_oa_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonLI" to="." method="_on_button_li_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonLI" to="." method="_on_button_li_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonLI" to="." method="_on_button_li_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonFD" to="." method="_on_button_fd_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonFD" to="." method="_on_button_fd_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonFD" to="." method="_on_button_fd_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonSL" to="." method="_on_button_sl_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonSL" to="." method="_on_button_sl_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonSL" to="." method="_on_button_sl_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonFF" to="." method="_on_button_ff_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonFF" to="." method="_on_button_ff_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonFF" to="." method="_on_button_ff_pressed"]
+[connection signal="mouse_entered" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_mouse_exited"]
+[connection signal="pressed" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_pressed"]
+[connection signal="pressed" from="CardInfoOverlay/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
