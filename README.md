@@ -20,7 +20,7 @@ Code & Script-As for coding, I am self-taught. So I use a lot of open source cod
 
 ## Credits:
 ### Made in Godot 4.1 (The Greatest Orchestration foundation for Development and Organization Transformation - I bet you didn't know that's what Godot stands for??? LOL)
-* Music/Sound FX: Pixabay and Fesliyan Studios (edited in Adobe Audition)
+* Music/Sound FX: Some Pixabay and Fesliyan Studios, one Suno AI gen. The Intro Song is a mashup mixdown of these I made using Adobe Audition
 * Card Layout: Godot Card Layout by Cyanglaz (Godot Addon)
 * Other Scripts: original with some help from ChatGPT "Code Copilot" custom (CAIDE sadly is not my coding bff--he's more of an idea guy lol)
 * Designs HUD, GUI, & Images: CC Lawhon (wielder of Firefly prompts and Photoshop), and Adobe Illustrator stock tweaked for buttons/UI type things.
