@@ -1,0 +1,398 @@
+[gd_scene load_steps=29 format=3 uid="uid://10sfry61q43c"]
+
+[ext_resource type="Script" uid="uid://c326en4nnf4wn" path="res://summoned_roles/scripts/summoned_roles_home.gd" id="1_geqb3"]
+[ext_resource type="Texture2D" uid="uid://btj7sykmql48o" path="res://summoned_roles/assets/scene/SummonedRolesBGempty.png" id="1_tvnlr"]
+[ext_resource type="PackedScene" uid="uid://ddk1xj36kbjux" path="res://summoned_roles/scenes/SceneX.tscn" id="2_2s0n2"]
+[ext_resource type="Texture2D" uid="uid://baneo4smjxoc6" path="res://summoned_roles/assets/scene/Image_CardsCircleFlat.png" id="3_qo1r2"]
+[ext_resource type="Texture2D" uid="uid://dtqq1oi13koo8" path="res://summoned_roles/assets/scene/Char1_OrdAuraX.png" id="4_f5afv"]
+[ext_resource type="Texture2D" uid="uid://bs1tpy5v8v8r7" path="res://summoned_roles/assets/scene/SummonedRolesTitle.png" id="4_jf2wy"]
+[ext_resource type="Texture2D" uid="uid://b0xllw58qfu7t" path="res://summoned_roles/assets/scene/Char2_Liaseillume.png" id="5_geqb3"]
+[ext_resource type="Texture2D" uid="uid://b61otianuer0g" path="res://summoned_roles/assets/scene/Char5_FyreForge.png" id="6_2s0n2"]
+[ext_resource type="Texture2D" uid="uid://bac6fj2pkd5s0" path="res://summoned_roles/assets/scene/Char4_SearchLight.png" id="7_mhwtj"]
+[ext_resource type="Texture2D" uid="uid://c01g0du7ygxao" path="res://summoned_roles/assets/scene/Char3_Fathomdepth.png" id="8_7mjgm"]
+[ext_resource type="Texture2D" uid="uid://co8dl4nlxjsp4" path="res://summoned_roles/assets/UI/character_buttons/Char1-Hover.png" id="9_u2arb"]
+[ext_resource type="Texture2D" uid="uid://cfln8dvwp6h6r" path="res://summoned_roles/assets/UI/character_buttons/Char3-Hover.png" id="10_1s7ti"]
+[ext_resource type="Texture2D" uid="uid://r1qwsqphdy0g" path="res://summoned_roles/assets/UI/character_buttons/Char2-Hover.png" id="11_dry1p"]
+[ext_resource type="Texture2D" uid="uid://bahn5x5malsk8" path="res://summoned_roles/assets/UI/character_buttons/Char4-Hover.png" id="12_auest"]
+[ext_resource type="Texture2D" uid="uid://qb257gm8bdiw" path="res://summoned_roles/assets/UI/character_buttons/Char5-Hover.png" id="13_e58yw"]
+[ext_resource type="Theme" uid="uid://de5noq4budj6f" path="res://summoned_roles/themes_fx/info_ui_theme.tres" id="14_qfllq"]
+[ext_resource type="FontFile" uid="uid://do0av1yoxn0dg" path="res://summoned_roles/themes_fx/Avqest.ttf" id="15_r5axa"]
+[ext_resource type="Texture2D" uid="uid://cveymcyn4lhyo" path="res://summoned_roles/assets/UI/sample_card/button_cardinfo.png" id="16_1bre1"]
+[ext_resource type="Texture2D" uid="uid://rwjd2mnbb62d" path="res://summoned_roles/assets/UI/sample_card/SampleCard-CardOnly.png" id="17_nmdfa"]
+[ext_resource type="Texture2D" uid="uid://8aw3b1f1nkip" path="res://summoned_roles/assets/UI/sample_card/SampleCard-Descriptors-All.png" id="18_w1w13"]
+[ext_resource type="Texture2D" uid="uid://c7jjww7p2kl0u" path="res://summoned_roles/assets/UI/sample_card/button-exit.png" id="19_fep83"]
+[ext_resource type="Texture2D" uid="uid://b35kkfqn5bx8l" path="res://summoned_roles/assets/UI/buttons/SoundOn.png" id="22_7mjgm"]
+[ext_resource type="AudioStream" uid="uid://qe4cwp4ulukj" path="res://summoned_roles/themes_fx/audio/the-shieldmaidens-song-401894.mp3" id="22_u2arb"]
+[ext_resource type="Texture2D" uid="uid://btbxqlharqyk2" path="res://summoned_roles/assets/UI/buttons/SoundOff.png" id="23_u2arb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrqa3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2iipp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ceadk"]
+bg_color = Color(0.756863, 1, 1, 0.0196078)
+shadow_color = Color(1, 1, 1, 0.501961)
+shadow_size = 12
+
+[sub_resource type="Theme" id="Theme_m6thq"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_rrqa3")
+Button/styles/focus = SubResource("StyleBoxEmpty_2iipp")
+Button/styles/hover = SubResource("StyleBoxFlat_ceadk")
+
+[node name="SummonedRolesHome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_geqb3")
+scene_x = ExtResource("2_2s0n2")
+
+[node name="BG" type="Control" parent="."]
+custom_minimum_size = Vector2(1366, 768)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1366.0
+offset_bottom = 768.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ImageBG" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_right = 1369.0
+offset_bottom = 783.0
+texture = ExtResource("1_tvnlr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ImageCards2" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 310.0
+offset_right = 854.0
+offset_bottom = 451.0
+texture = ExtResource("3_qo1r2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Title" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 234.0
+offset_top = 98.0
+offset_right = -187.0
+offset_bottom = 285.0
+grow_horizontal = 2
+pivot_offset = Vector2(472, 93)
+texture = ExtResource("4_jf2wy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Summoners" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 346.0
+offset_top = 430.0
+offset_right = 1086.0
+offset_bottom = 768.0
+size_flags_vertical = 3
+
+[node name="OrdAuraX" type="TextureRect" parent="Summoners"]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 31.0
+offset_right = 120.0
+offset_bottom = 286.0
+mouse_filter = 2
+texture = ExtResource("4_f5afv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LiaseIllume" type="TextureRect" parent="Summoners"]
+layout_mode = 2
+offset_left = 89.0
+offset_top = 35.0
+offset_right = 286.0
+offset_bottom = 326.0
+mouse_filter = 2
+texture = ExtResource("5_geqb3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="FyreForge" type="TextureRect" parent="Summoners"]
+layout_mode = 2
+offset_left = 565.0
+offset_top = 22.0
+offset_right = 708.0
+offset_bottom = 286.0
+mouse_filter = 2
+texture = ExtResource("6_2s0n2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="SearchLight" type="TextureRect" parent="Summoners"]
+layout_mode = 2
+offset_left = 460.0
+offset_top = 32.0
+offset_right = 600.0
+offset_bottom = 314.0
+mouse_filter = 2
+texture = ExtResource("7_mhwtj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="FathomDepth" type="TextureRect" parent="Summoners"]
+layout_mode = 2
+offset_left = 213.0
+offset_top = 28.0
+offset_right = 440.0
+offset_bottom = 336.0
+mouse_filter = 2
+texture = ExtResource("8_7mjgm")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Buttons" type="Control" parent="."]
+custom_minimum_size = Vector2(1366, 768)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1371.0
+offset_bottom = 767.0
+mouse_filter = 1
+
+[node name="HoverOA" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 293.0
+offset_top = 389.0
+offset_right = 535.0
+offset_bottom = 770.0
+texture = ExtResource("9_u2arb")
+
+[node name="HoverFD" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 487.0
+offset_top = 382.0
+offset_right = 857.0
+offset_bottom = 767.0
+texture = ExtResource("10_1s7ti")
+
+[node name="HoverLI" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 362.0
+offset_top = 393.0
+offset_right = 700.0
+offset_bottom = 774.0
+texture = ExtResource("11_dry1p")
+
+[node name="HoverSL" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 733.0
+offset_top = 390.0
+offset_right = 1011.0
+offset_bottom = 771.0
+texture = ExtResource("12_auest")
+
+[node name="HoverFF" type="TextureRect" parent="Buttons"]
+visible = false
+layout_mode = 0
+offset_left = 842.0
+offset_top = 381.0
+offset_right = 1123.0
+offset_bottom = 768.0
+texture = ExtResource("13_e58yw")
+
+[node name="ButtonOA" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 459.0
+offset_right = 454.0
+offset_bottom = 720.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("14_qfllq")
+
+[node name="ButtonLI" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 467.0
+offset_right = 566.0
+offset_bottom = 737.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("14_qfllq")
+
+[node name="ButtonFD" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 460.0
+offset_right = 745.0
+offset_bottom = 761.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("14_qfllq")
+
+[node name="ButtonSL" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 464.0
+offset_right = 898.0
+offset_bottom = 738.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("14_qfllq")
+
+[node name="ButtonFF" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 455.0
+offset_right = 1015.0
+offset_bottom = 711.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = ExtResource("14_qfllq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 559.0
+offset_right = 262.0
+offset_bottom = 759.0
+
+[node name="HoverHelpText" type="RichTextLabel" parent="Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/line_separation = -4
+theme_override_fonts/normal_font = ExtResource("15_r5axa")
+theme_override_font_sizes/normal_font_size = 21
+text = "Summon a role  > > > 
+to see her talent cards, or seek wisdom in the Card Guide (?)."
+fit_content = true
+vertical_alignment = 1
+
+[node name="CardInfo" type="TextureButton" parent="Buttons/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_m6thq")
+texture_normal = ExtResource("16_1bre1")
+texture_hover = ExtResource("16_1bre1")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="CardInfoOverlay" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1366.0
+offset_bottom = 768.0
+pivot_offset = Vector2(683, 384)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="PanelBG" type="Panel" parent="CardInfoOverlay"]
+custom_minimum_size = Vector2(1366, 768)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("14_qfllq")
+metadata/_edit_use_anchors_ = true
+
+[node name="CardSample" type="TextureRect" parent="CardInfoOverlay"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 348.0
+offset_top = 183.0
+offset_right = 658.0
+offset_bottom = 634.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_nmdfa")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="DescriptionsAll" type="TextureRect" parent="CardInfoOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("18_w1w13")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonExit" type="TextureButton" parent="CardInfoOverlay"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("19_fep83")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_u2arb")
+volume_db = -3.0
+autoplay = true
+parameters/looping = true
+
+[node name="ButtonSound" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 69.0
+offset_bottom = 70.0
+toggle_mode = true
+texture_normal = ExtResource("22_7mjgm")
+texture_pressed = ExtResource("23_u2arb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="mouse_entered" from="Buttons/ButtonOA" to="." method="_on_button_oa_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonOA" to="." method="_on_button_oa_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonOA" to="." method="_on_button_oa_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonLI" to="." method="_on_button_li_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonLI" to="." method="_on_button_li_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonLI" to="." method="_on_button_li_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonFD" to="." method="_on_button_fd_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonFD" to="." method="_on_button_fd_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonFD" to="." method="_on_button_fd_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonSL" to="." method="_on_button_sl_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonSL" to="." method="_on_button_sl_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonSL" to="." method="_on_button_sl_pressed"]
+[connection signal="mouse_entered" from="Buttons/ButtonFF" to="." method="_on_button_ff_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/ButtonFF" to="." method="_on_button_ff_mouse_exited"]
+[connection signal="pressed" from="Buttons/ButtonFF" to="." method="_on_button_ff_pressed"]
+[connection signal="mouse_entered" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_mouse_exited"]
+[connection signal="pressed" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_pressed"]
+[connection signal="pressed" from="CardInfoOverlay/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="toggled" from="ButtonSound" to="." method="_on_button_sound_toggled"]
