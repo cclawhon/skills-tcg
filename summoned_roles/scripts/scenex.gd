@@ -22,7 +22,7 @@ const SETS := [
 	{"name": "FathomDepth", "desc": "Core of Conviction", "song": preload("res://summoned_roles/themes_fx/audio/music_fd.mp3")},
 	{"name": "SearchLight", "desc": "Data & Research", "song": preload("res://summoned_roles/themes_fx/audio/music_sl.mp3")},
 	{"name": "FyreForge",   "desc": "Creativity & Innovation", "song": preload("res://summoned_roles/themes_fx/audio/music_ff.mp3")},
-	{"name": "StellarLume",   "desc": "Epic Cards & Eccentricity", "song": preload("res://summoned_roles/themes_fx/audio/SummonedRoles-Home_mixdown.mp3")},
+	{"name": "StellarLume",   "desc": "Epic Cards & Eccentricity", "song": preload("res://summoned_roles/themes_fx/audio/SummonedRoles-IntroRevB_mixdown.mp3")},
 ]
 
 func _ready() -> void:

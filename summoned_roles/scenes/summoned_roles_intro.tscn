@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c3x5d4eor23lm"]
+[gd_scene load_steps=33 format=3 uid="uid://c3x5d4eor23lm"]
 
 [ext_resource type="Script" uid="uid://xm1hg8tfsp7i" path="res://summoned_roles/scripts/summoned_roles_intro.gd" id="1_dq86j"]
 [ext_resource type="PackedScene" uid="uid://ddk1xj36kbjux" path="res://summoned_roles/scenes/SceneX.tscn" id="2_2iipp"]
@@ -22,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://rwjd2mnbb62d" path="res://summoned_roles/assets/UI/sample_card/SampleCard-CardOnly.png" id="20_75o3t"]
 [ext_resource type="Texture2D" uid="uid://8aw3b1f1nkip" path="res://summoned_roles/assets/UI/sample_card/SampleCard-Descriptors-All.png" id="21_rpf36"]
 [ext_resource type="Texture2D" uid="uid://c7jjww7p2kl0u" path="res://summoned_roles/assets/UI/sample_card/button-exit.png" id="22_m8ffh"]
+[ext_resource type="Texture2D" uid="uid://5b2kh0r5vyg5" path="res://summoned_roles/assets/UI/buttons/buttonplay_normal.png" id="23_ceadk"]
 [ext_resource type="AudioStream" uid="uid://tc3iyxyq2wke" path="res://summoned_roles/themes_fx/audio/SummonedRoles-IntroRevB_mixdown.mp3" id="24_2iipp"]
+[ext_resource type="Texture2D" uid="uid://45hjei268lem" path="res://summoned_roles/assets/UI/buttons/buttonplay_hover.png" id="24_yjgv3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrqa3"]
 
@@ -712,6 +714,27 @@ texture_normal = ExtResource("22_m8ffh")
 ignore_texture_size = true
 stretch_mode = 4
 
+[node name="Start" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -439.0
+offset_right = 121.0
+offset_bottom = -367.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+theme = ExtResource("17_rprjg")
+texture_normal = ExtResource("23_ceadk")
+texture_pressed = ExtResource("24_yjgv3")
+texture_hover = ExtResource("24_yjgv3")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_4nfhl")
@@ -719,7 +742,7 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_2iipp")
-autoplay = true
+volume_db = -2.0
 parameters/looping = true
 
 [connection signal="pressed" from="BG/ImageCards2/Button05" to="." method="_on_button_05_pressed"]
@@ -742,4 +765,5 @@ parameters/looping = true
 [connection signal="mouse_exited" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_mouse_exited"]
 [connection signal="pressed" from="Buttons/VBoxContainer/CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="pressed" from="CardInfoOverlay/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

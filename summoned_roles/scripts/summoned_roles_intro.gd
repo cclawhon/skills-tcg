@@ -1,5 +1,6 @@
 extends Control
 
+@onready var audioplayer = $AudioStreamPlayer
 @onready var animplayer = $AnimationPlayer
 @onready var hover_helptext = $Buttons/VBoxContainer/HoverHelpText
 @onready var card_info = $CardInfoOverlay
@@ -19,16 +20,13 @@ func _ready():
 	card_info.visible = false
 	hover_helptext.self_modulate = Color(1, 1, 1, 0)
 	buttons.visible = false
-	animplayer.play("anim_intro")
-	await animplayer.animation_finished
-	_on_animation_player_animation_finished("anim_intro")
 
 #---scene set and go----
 func go_to_scene(idx: int) -> void:
 	if scene_x == null:
 		return
 	var inst = scene_x.instantiate()
-	inst.set("set_id", idx)          # ✅ set BEFORE add_child / _ready
+	inst.set("set_id", idx)
 	get_tree().root.add_child(inst)
 
 	var old_scene = get_tree().current_scene
@@ -77,17 +75,6 @@ func _on_card_info_pressed() -> void:
 func _on_button_exit_pressed() -> void:
 	card_info.visible = false
 
-#anim stuff
-func _on_animation_player_animation_finished(anim_name) -> void:
-	if anim_name == "anim_intro":
-		$Buttons/ButtonOA.disabled = false
-		$Buttons/ButtonLI.disabled = false
-		$Buttons/ButtonFD.disabled = false
-		$Buttons/ButtonSL.disabled = false
-		$Buttons/ButtonFF.disabled = false
-		$BG/ImageCards2/Button05.disabled = false
-		buttons.visible = true
-
 #-----BUTTONS TO CARDS SCENES-----#
 
 func _on_button_oa_pressed() -> void:
@@ -108,3 +95,24 @@ func _on_button_ff_pressed() -> void:
 func _on_button_05_pressed() -> void:
 	pass 
 	#go_to_scene(5)
+
+
+func _on_start_pressed() -> void:
+	$Start.visible = false
+	$Start.disabled = true
+	AudioServer.unlock()               # required by browsers on first user gesture
+	animplayer.play("anim_intro")
+	audioplayer.play(0)
+	await animplayer.animation_finished
+	_on_animation_player_animation_finished("anim_intro")
+
+#anim stuff
+func _on_animation_player_animation_finished(anim_name) -> void:
+	if anim_name == "anim_intro":
+		$Buttons/ButtonOA.disabled = false
+		$Buttons/ButtonLI.disabled = false
+		$Buttons/ButtonFD.disabled = false
+		$Buttons/ButtonSL.disabled = false
+		$Buttons/ButtonFF.disabled = false
+		$BG/ImageCards2/Button05.disabled = false
+		buttons.visible = true
